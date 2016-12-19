@@ -1,0 +1,11 @@
+PDFBundle\Entity\Page2:
+    type: entity
+    table: null
+    repositoryClass: PDFBundle\Repository\Page2Repository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    lifecycleCallbacks: {  }

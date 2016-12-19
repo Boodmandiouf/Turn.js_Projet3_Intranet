@@ -1,0 +1,24 @@
+page2_index:
+    path:     /
+    defaults: { _controller: "PDFBundle:Page2:index" }
+    methods:  GET
+
+page2_show:
+    path:     /{id}/show
+    defaults: { _controller: "PDFBundle:Page2:show" }
+    methods:  GET
+
+page2_new:
+    path:     /new
+    defaults: { _controller: "PDFBundle:Page2:new" }
+    methods:  [GET, POST]
+
+page2_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "PDFBundle:Page2:edit" }
+    methods:  [GET, POST]
+
+page2_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "PDFBundle:Page2:delete" }
+    methods:  DELETE

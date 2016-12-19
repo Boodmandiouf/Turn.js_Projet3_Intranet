@@ -1,0 +1,16 @@
+pdf_homepage:
+    path:     /
+    defaults: { _controller: PDFBundle:Default:index }
+
+page1_index:
+    path:     /index
+    defaults: { _controller: PDFBundle:Page1:index }
+
+pdf_page1:
+    resource: "@PDFBundle/Resources/config/routing/page1.yml"
+    prefix:   /page1
+
+pdf_page2:
+    resource: "@PDFBundle/Resources/config/routing/page2.yml"
+    prefix:   /page2
+

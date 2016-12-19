@@ -1,0 +1,24 @@
+page1_index:
+    path:     /
+    defaults: { _controller: "PDFBundle:Page1:index" }
+    methods:  GET
+
+page1_show:
+    path:     /{id}/show
+    defaults: { _controller: "PDFBundle:Page1:show" }
+    methods:  GET
+
+page1_new:
+    path:     /new
+    defaults: { _controller: "PDFBundle:Page1:new" }
+    methods:  [GET, POST]
+
+page1_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "PDFBundle:Page1:edit" }
+    methods:  [GET, POST]
+
+page1_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "PDFBundle:Page1:delete" }
+    methods:  DELETE

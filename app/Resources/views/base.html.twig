@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width = 1050, user-scalable = no" />
+        <title>{% block title %}Paye ton essaie !{% endblock %}</title>
+        {% block stylesheets %}
+
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+            <link rel="stylesheet" type="text/css" href="{{ asset('bundles/pdf/css/style.css') }}">
+            <script src="https://use.fontawesome.com/f0f4368368.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('Bender_nb.ico') }}" />
+    </head>
+
+    {% block navbar %}
+    <br/>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mynav" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Lionel Picard</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="mynav">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="{{ path('page1_index') }}"><i class="fa fa-file-text icon" aria-hidden="true"></i>Page 1</a></li>
+                        <li><a href="{{ path('page2_index') }}"><i class="fa fa-file-text icon" aria-hidden="true"></i>Page 2</a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+
+    {% endblock %}
+
+    <body>
+
+        {% block body %}{% endblock %}
+
+        <footer>
+            <p class="txt_footer">@ 2016 Copyright <a href="#"><i class="fa fa-linkedin-square fa-2x reseaux" aria-hidden="true"></i></a><a href="#"><i class="fa fa-github fa-2x reseaux" aria-hidden="true"></i>
+                </a></p>
+        </footer>
+
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

@@ -1,0 +1,129 @@
+/****************** CSS ********************/
+
+* {
+  font-family: 'Lato', sans-serif;
+}
+
+/****************** CSS TEST SYMPH ********************/
+
+
+h1 {
+  text-align: center;
+  color: black;
+  border: 5px groove darkslategrey;
+  border-radius: 15px 50px;
+  margin-left: 180px;
+  margin-right: 180px;
+}
+
+li {
+  text-align: center;
+}
+
+hr {
+  margin: 40px;
+}
+
+
+
+/****************** CSS TEST SYMPH FIN ********************/
+
+
+/******************************************/
+/****************** NAV BAR ***************/
+/******************************************/
+
+
+/******************************************/
+/****************** NAV BAR FIN ***************/
+/******************************************/
+
+header {
+  margin-bottom: 50px;
+}
+
+body {
+  background-color: #D1D1D1;
+  margin-top: 50px;
+}
+
+p {
+  font-size: 1.2em;
+  margin: 20px;
+}
+
+footer {
+  background-color: #656666;
+  width: 100%;
+  height: 70px;
+
+}
+
+.reseaux {
+  color: #9C9C9C;
+  margin-left: 5%;
+}
+
+.reseaux:hover {
+  color: #D9D9D9;
+}
+
+#presentation {
+  margin-top: -50px;
+  padding-top: 100px;
+}
+
+#progress {
+  margin-top: -80px;
+  padding-top: 120px;
+}
+
+#experience {
+  margin-top: -80px;
+  padding-top: 120px;
+}
+
+#portfolio {
+  margin-top: -80px;
+  padding-top: 120px
+}
+
+#contact {
+  background-color: #E6E6E6;
+  box-shadow: 2.5px 2.5px 2.5px #969696;
+  border-radius: 25px;
+  padding: 20px;
+}
+
+.txt_footer {
+  padding-top: 15px;
+  text-align: center;
+  color: white;
+}
+
+/************ FONT ASWOME ****************/
+
+.icon {
+  color: #9C9C9C;
+  margin-right: 7px;
+}
+
+/************ ESSAIE PDF ***********************/
+
+.point {
+  list-style: none;
+}
+
+
+/******************************************/
+/****************** BASIC CSS ***************/
+/******************************************/
+/* Basic sample */
+
+.flipbook-viewport .container{
+  position: static;
+  margin-right: 18%;
+  margin-left: 18%;
+
+
+}

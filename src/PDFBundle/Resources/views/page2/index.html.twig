@@ -1,0 +1,117 @@
+{% extends '::base.html.twig' %}
+
+
+
+{% block body %}
+
+
+{% block navbar %}
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mynav" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Lionel Picard</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="mynav">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="{{ path('page1_index') }}"><i class="fa fa-file-text icon" aria-hidden="true"></i>Page 1</a></li>
+                    <li class="active"><a href="{{ path('page2_index') }}"><i class="fa fa-file-text icon" aria-hidden="true"></i>Page 2</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+{% endblock %}
+
+    <hr/>
+    <h1>Page 2</h1>
+
+<div class="flipbook-viewport">
+    <div class="container">
+        <div class="flipbook">
+            <div style="background-image:url({{ asset('bundles/pdf/pages/1.jpg') }})"></div>
+            <div style="background-image:url({{ asset('bundles/pdf/pages/2.jpg') }})"></div>
+            <div style="background-image:url({{ asset('bundles/pdf/pages/3.jpg') }})"></div>
+            <div style="background-image:url({{ asset('bundles/pdf/pages/4.jpg') }})"></div>
+            <div style="background-image:url({{ asset('bundles/pdf/pages/5.jpg') }})"></div>
+            <div style="background-image:url({{ asset('bundles/pdf/pages/6.jpg') }})"></div>
+            <div style="background-image:url({{ asset('bundles/pdf/pages/7.jpg') }})"></div>
+            <div style="background-image:url({{ asset('bundles/pdf/pages/8.jpg') }})"></div>
+        </div>
+    </div>
+</div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for page2 in page2s %}
+            <tr>
+                <td><a href="{{ path('page2_show', { 'id': page2.id }) }}">{{ page2.id }}</a></td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('page2_show', { 'id': page2.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('page2_edit', { 'id': page2.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('page2_new') }}">Create a new page2</a>
+        </li>
+    </ul>
+{% endblock %}
+
+
+    {% block javascripts %}
+
+    <script src="{{ asset('bundles/pdf/js/jquery.min.1.7.js') }}"></script>
+    <script src="{{ asset('bundles/pdf/js/modernizr.2.5.3.min.js') }}"></script>
+    <script src="{{ asset('bundles/pdf/js/turn.js') }}"></script>
+    <script src="{{ asset('bundles/pdf/js/basic.js') }}"></script>
+
+    <script>
+
+            // Create the flipbook
+
+            $('.flipbook').turn({
+                // Width
+                width:1000,
+
+                // Height
+                height:645,
+
+                // Elevation
+                elevation: 60,
+
+                // Enable gradients
+                gradients: false,
+
+                // Auto center this flipbook
+                autoCenter: true
+
+            });
+
+    </script>
+
+{% endblock %}
